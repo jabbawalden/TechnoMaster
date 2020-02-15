@@ -1,0 +1,71 @@
+{
+    "name": "PlayerControl",
+    "maps": [
+        {
+            "name": "PlayerInput",
+            "id": "e50c46e0-68d6-4e4f-909e-8af1c2915a48",
+            "actions": [
+                {
+                    "name": "LeftStick",
+                    "type": "Button",
+                    "id": "0378558a-9973-4983-989b-cde2c7c05e76",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "YButton",
+                    "type": "Button",
+                    "id": "bbf6a8c2-249a-4561-9556-66796246c1b0",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "RightStick",
+                    "type": "Button",
+                    "id": "25a3b89a-f46e-42a4-b8ff-bdeeb389081d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f62bee1a-ea17-4c4b-a98a-fd1c270edad2",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftStick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aedb1357-f6d9-4bc2-8bf8-8f2c41f21c4c",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "YButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1be77c30-8bff-4097-b2b3-b65c124e8dda",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightStick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

@@ -16,7 +16,7 @@ public class AnimationComponent : MonoBehaviour
 
     float NewAnimTime;
 
-    float AnimRate;
+    [SerializeField] float AnimRate;
 
     int frameCount;
 
@@ -28,14 +28,14 @@ public class AnimationComponent : MonoBehaviour
 
     bool bIsLooping;
 
+    bool bIsReversed;
+
     public virtual void Start()
     {
         ourRenderer = GetComponent<SpriteRenderer>();
 
         if (!ourRenderer)
             ourRenderer = gameObject.AddComponent<SpriteRenderer>(); 
-
-        AnimRate = 0.3f; 
     }
 
     public virtual void Update()
@@ -62,13 +62,11 @@ public class AnimationComponent : MonoBehaviour
             if (frameCount <= spriteArray.Length - 1)
             {
                 ourRenderer.sprite = spriteArray[frameCount];
-                print("frame count is: " + frameCount);
             }
             else
             {
                 frameCount = 0;
                 ourRenderer.sprite = spriteArray[frameCount];
-                print("frame count is: " + frameCount);
             }
 
             frameCount++;
@@ -78,7 +76,6 @@ public class AnimationComponent : MonoBehaviour
             if (frameCount <= spriteArray.Length - 1)
             {
                 ourRenderer.sprite = spriteArray[frameCount];
-                print("frame count is: " + frameCount);
 
                 frameCount++;
             }
