@@ -23,6 +23,9 @@ public class AnimationComponent : MonoBehaviour
     public delegate void NextFrame();
     public NextFrame NextFrameDelegate;
 
+    public delegate void EndAnimationSequence();
+    public EndAnimationSequence EndAnimationSequenceDelegate;
+
     //public delegate void SetLastSpriteArray();
     //public SetLastSpriteArray SetLastSpriteArrayDelegate;
 
@@ -57,6 +60,9 @@ public class AnimationComponent : MonoBehaviour
 
     public void IterateThroughFrames(Sprite[] spriteArray)
     {
+        if (spriteArray.Length == 0)
+            return;
+
         if (bIsLooping)
         {
             if (frameCount <= spriteArray.Length - 1)
@@ -83,6 +89,7 @@ public class AnimationComponent : MonoBehaviour
             {
                 ReturnAnimationState();
                 NextFrameDelegate?.Invoke();
+                EndAnimationSequenceDelegate?.Invoke();
             }
         }
     }
@@ -93,9 +100,6 @@ public class AnimationComponent : MonoBehaviour
         lastAnimState = animState;
         animState = newAnimState;
         bIsLooping = bShouldLoop;
-
-        //if (bIsLooping)
-        //    SetLastSpriteArrayDelegate?.Invoke();
     }
 
     public void ReturnAnimationState()

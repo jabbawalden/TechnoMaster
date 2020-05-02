@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     PlayerInput playerInputComponent;
     PlayerChecks playerChecks;
     Rigidbody2D rb;
@@ -12,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     GameObject aimer;
 
     [SerializeField] float moveSpeed = 10f;
+    [SerializeField] float aimLerpSpeed = 0.25f;
 
     [SerializeField] Quaternion aimRotate;
 
@@ -57,7 +57,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (playerInputComponent.aim.x != 0 || playerInputComponent.aim.y != 0)
         {
-            aimer.transform.rotation = Quaternion.AngleAxis(aimAngle, Vector3.forward);
+            Quaternion aimTargetValue = Quaternion.AngleAxis(aimAngle, Vector3.forward);
+            Quaternion aimTarget = Quaternion.Slerp(aimer.transform.rotation, aimTargetValue, aimLerpSpeed);
+            aimer.transform.rotation = aimTarget;
         }
     }
 

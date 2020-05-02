@@ -5,14 +5,14 @@ using UnityEngine;
 public class PlayerAnimationController : MonoBehaviour
 {
     PlayerChecks playerChecks;
-    AnimationComponent animComponent;
+    AnimationComponent animCharacterComponent;
     Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Awake()
     {
         playerChecks = GetComponent<PlayerChecks>();
-        animComponent = GetComponentInChildren<AnimationComponent>();
+        animCharacterComponent = GetComponentInChildren<AnimationComponent>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -25,7 +25,7 @@ public class PlayerAnimationController : MonoBehaviour
             {
                 playerChecks.bIsMoving = true;
                 playerChecks.bIsIdle = false;
-                animComponent.ChangeAnimationState(AnimationState.Move, true);
+                animCharacterComponent.ChangeAnimationState(AnimationState.Move, true);
             }
         }
         else if (rb.velocity == Vector2.zero)
@@ -35,7 +35,7 @@ public class PlayerAnimationController : MonoBehaviour
             {
                 playerChecks.bIsMoving = false;
                 playerChecks.bIsIdle = true;
-                animComponent.ChangeAnimationState(AnimationState.Idle, true);
+                animCharacterComponent.ChangeAnimationState(AnimationState.Idle, true);
             }
         }
 

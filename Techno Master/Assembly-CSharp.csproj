@@ -63,12 +63,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Dynamic Objects\Enemies\OnVisibleToPlayer.cs" />
-    <Compile Include="Assets\Dynamic Objects\Enemies\Resonator\Scripts\ResonatorMovement.cs" />
+    <Compile Include="Assets\Dynamic Objects\Enemies\Resonator\Scripts\AnimComp_ResonatorAttack.cs" />
+    <Compile Include="Assets\Dynamic Objects\Enemies\Resonator\Scripts\ResonatorAnimationAttackController.cs" />
+    <Compile Include="Assets\Dynamic Objects\Enemies\Resonator\Scripts\ResonatorAttack.cs" />
+    <Compile Include="Assets\Dynamic Objects\Enemies\Resonator\Scripts\ResonatorChecks.cs" />
+    <Compile Include="Assets\Dynamic Objects\Enemies\Resonator\Scripts\ResonatorMainController.cs" />
+    <Compile Include="Assets\Dynamic Objects\Enemies\Resonator\Scripts\ResonatorProjectile.cs" />
     <Compile Include="Assets\Dynamic Objects\Player\Scripts\AnimComp_Player.cs" />
     <Compile Include="Assets\Dynamic Objects\Player\Scripts\PlayerAnimationController.cs" />
     <Compile Include="Assets\Dynamic Objects\Player\Scripts\PlayerCamera.cs" />
     <Compile Include="Assets\Dynamic Objects\Player\Scripts\PlayerChecks.cs" />
     <Compile Include="Assets\Dynamic Objects\Player\Scripts\PlayerControl.cs" />
+    <Compile Include="Assets\Dynamic Objects\Player\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Dynamic Objects\Player\Scripts\PlayerInput.cs" />
     <Compile Include="Assets\Dynamic Objects\Player\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Game Files\Components\AnimationComponent.cs" />
